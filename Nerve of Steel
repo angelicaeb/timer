@@ -1,0 +1,24 @@
+"""
+This is a program for the party game Nerve of Steel. This is In-class Exercise 4 for MGTC28.
+"""
+
+# The game Nerve of Steel goes as follows:
+# 1. The program displays 'Players Stand'
+# 2. The program sleeps for a random time between 5 to 25 seconds.  While the program is sleeping, players can sit down.  Keep track of the last person to sit down.
+# 3. When sleep is over, the program displays "Time Up.  Last to sit down wins."  Players still standing are eliminated, and the winner is the last person to sit down.
+
+import time # this function will require a time function because the game requires a timer.
+import random # this function will require a random function because the timer sleeps for a random number of seconds between 5 and 25.
+
+def Play_Nerve_of_Steel(): # Here we are creating the function for the Nerve of Steel game.
+    
+    print("Players Stand") # As stated earlier, the first part of the game is the program telling the players to stand.
+    
+    random_timer = random.randint(5,25) # We are setting the random number of seconds after which the timer goes off.
+    time.sleep(random_timer) # We are establishing the timer that will go off after anywhere between 5 and 25 seconds.
+    
+    print("Times up. Last to sit down wins") # This text indicates that the players still standing are eliminated, and the winner is the last person to sit down.
+    
+    
+# Now that we've created a program for the game, we can run the function to play.
+Play_Nerve_of_Steel()
